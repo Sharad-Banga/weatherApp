@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./index.css";
 
-const API_KEY = "d1845658f92b31c64bd94f06f7188c9c";
+const API_KEY = "906dffe2c9087030dd13b6838cf2a1d0 ";
 
 function App() {
   const [city, setCity] = useState("");
@@ -43,7 +43,7 @@ function App() {
       )}
 
       <footer className="footer">
-        <p>Developed by Sneha & Vishali 💙</p>
+        <p>Developed by Sneha , Vishali & shivani 💙</p>
       </footer>
     </div>
   );
