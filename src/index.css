@@ -1,23 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 body {
   margin: 0;
-  background: linear-gradient(to bottom right, #4e54c8, #8f94fb);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
 }
 
 .app {
   text-align: center;
   padding: 2rem;
-  max-width: 420px;
-  margin: 5rem auto;
-  background: #1e1e2f;
-  color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  max-width: 440px;
+  width: 100%;
+  background: rgba(30, 30, 47, 0.9);
+  color: #f1f1f1;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.app:hover {
+  transform: translateY(-4px);
 }
 
 h2 {
   margin-bottom: 1.5rem;
   font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
 }
 
 .input-container {
@@ -25,47 +41,99 @@ h2 {
   gap: 10px;
   justify-content: center;
   margin-bottom: 1.5rem;
+  flex-wrap: wrap;
 }
 
 input {
-  padding: 0.7rem;
-  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
   border: none;
-  width: 60%;
+  flex: 1;
+  min-width: 180px;
   font-size: 1rem;
   outline: none;
+  background: #f9f9f9;
+  color: #333;
+  transition: box-shadow 0.2s ease;
+}
+
+input:focus {
+  box-shadow: 0 0 0 3px #89c4f4;
 }
 
 button {
-  padding: 0.7rem 1.2rem;
+  padding: 0.75rem 1.2rem;
   border: none;
-  background: #00c6ff;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
   color: white;
   font-weight: bold;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s ease;
+  font-size: 1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+  min-width: 120px;
+  margin-top: 0.5rem;
 }
 
 button:hover {
-  background: #0072ff;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  transform: scale(1.05);
 }
 
 .weather-info {
-  margin-top: 1rem;
-  background: #2e2e3e;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 0 rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.2rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.weather-info h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #ffefc2;
 }
 
 .weather-info p {
-  margin: 8px 0;
-  font-size: 1.1rem;
+  margin: 10px 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
 }
 
 .footer {
   margin-top: 2rem;
-  font-size: 0.9rem;
-  color: #aaa;
+  font-size: 0.85rem;
+  color: #dddddd;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+  opacity: 0.8;
+}
+
+/* 🌐 Mobile Responsive Enhancements */
+@media (max-width: 480px) {
+  .app {
+    padding: 1.5rem 1rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  input {
+    width: 80%;
+  }
+
+  button {
+    width: 90%;
+  }
+
+  .input-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .weather-info p {
+    font-size: 1rem;
+  }
 }
